@@ -2,26 +2,68 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+
+
+.wordCarousel {
+    font-size: 36px;
+    font-weight: 100;
+    color: #eee;
+
+    div {
+        overflow: hidden;
+        position: relative;
+        float: right;
+        height: 65px;
+        padding-top: 10px;
+        margin-top: -10px;
+
+        li {
+            font-family: Serif;
+            color: #eee;
+            font-weight: 700;
+            padding: 0 10px;
+            height: 45px;
+            margin-bottom: 45px;
+            display: block;
+        }
+    }
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+.flip3 {
+    animation: flip3 5s  cubic-bezier(0.23, 1, 0.32, 1.2) infinite;
+}
+
+@keyframes flip3 {
+    0% {margin-top: -10px;}
+    5% {margin-top: 10px;}
+    35% {margin-top: -80px;}
+    40% {margin-top: -100px;}
+    45% {margin-top: -90px;}
+    60% {margin-top: -155px;}
+    65% {margin-top: -160px;}
+    99.99% {margin-top: 0px;}
+    100% {margin-top: 0px;}
+}
+
+
+input[type="checkbox"] {
+    
+    width: 20px;
+    height: 20px;
+    outline: none;
+    border: 2px solid black;
+    /* transition: background-color 0.3s, border 0.3s; */
   }
-}
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
+  
+    input[type="checkbox"]:hover {
+        cursor: pointer;
+        background: black;
+    }
+  input[type="checkbox"]:checked {
+    accent-color: black;
+    padding: 10px;
+    mix-blend-mode: multiply;
+    border: 2px solid black;
+  }
+  
+  
