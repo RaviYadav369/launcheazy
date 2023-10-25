@@ -66,4 +66,43 @@ input[type="checkbox"] {
     border: 2px solid black;
   }
   
+
+  .slick-prev {
+    left: 3% !important;
+    z-index: 1;
+    background-color: black;
+    height: 20px;
+    width: 20px;
+    font-size: 50px;
+    border-radius: 100%;
+  }
+  .slick-prev:hover {
+    left: 3% !important;
+    z-index: 1;
+    background-color: black;
+  }
+  .slick-prev:before, .slick-next:before {
+    color: white !important;
+    background-color: black/50%;
+  }
   
+  .slick-next {
+    right: 3% !important;
+    z-index: 1;
+    background-color: black;
+    height: 20px;
+    width: 20px;
+    font-size: 50px;
+    border-radius: 100%;
+  }
+
+  .slick-next:hover {
+    right: 3% !important;
+    z-index: 1;
+    background-color: black;
+    
+  }
+.slick-slide{
+  padding-left: 8px !important;
+  padding-right: 8px !important;
+}

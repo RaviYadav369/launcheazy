@@ -3,7 +3,7 @@ import "../app/globals.css";
 
 const Categories = () => {
   return (
-    <div>
+    <div className="hidden md:block lg:block">
       <h2 className="py-4">Categories</h2>
       <div className="flex flex-col">
         <div className="flex  py-1">
