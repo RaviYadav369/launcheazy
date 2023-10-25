@@ -1,6 +1,5 @@
 ![Screenshot 2023-10-25 233310](https://github.com/RaviYadav369/launcheazy/assets/88570593/6ae8fee6-2f20-49d8-acce-d728b9b6ae96)
-![Screenshot 2023-10-25 233310](https://github.com/RaviYadav369/launcheazy/assets/88570593/769066df-8cba-4b80-97d5-c12c455603ac)
-![Screenshot 2023-10-25 233310](https://github.com/RaviYadav369/launcheazy/assets/88570593/e431c94b-2d88-478d-bf17-b961b1905e4f)
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
