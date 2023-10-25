@@ -1,7 +1,19 @@
-import React from "react";
+'use client'
+import React, { use } from "react";
 import "../app/globals.css";
+import { useRouter } from "next/navigation";
 
 const Categories = () => {
+  const [checked, setChecked] = React.useState(false);
+  const router = useRouter();
+
+  const handleClick = (e:any) => {
+    console.log(e.target.value)
+    // router.push(`/marketplace/${e.target.value}`)
+    
+  }
+
+
   return (
     <div className="hidden md:block lg:block">
       <h2 className="py-4">Categories</h2>
@@ -14,6 +26,7 @@ const Categories = () => {
               id="announcements"
               name="announcements"
               value="announcements"
+              onClick={handleClick}
             />
           </div>
           <p className="font-semibold  text-black/70 pb-1 text-md">Announcements</p>
@@ -26,6 +39,7 @@ const Categories = () => {
               id="educate"
               name="educate"
               value="educate"
+              onClick={handleClick}
             />
           </div>
           <p className="font-semibold  text-black/70 pb-1 text-md">Educate & Inform</p>
@@ -38,6 +52,7 @@ const Categories = () => {
               id="invitation"
               name="invitation"
               value="invitation"
+              onClick={handleClick}
             />
           </div>
           <p className="font-semibold  text-black/70 pb-1 text-md">Invitation</p>
@@ -50,6 +65,7 @@ const Categories = () => {
               id="ocassions"
               name="ocassions"
               value="ocassions"
+              onClick={handleClick}
             />
           </div>
           <p className="font-semibold  text-black/70 pb-1 text-md">Ocassions</p>

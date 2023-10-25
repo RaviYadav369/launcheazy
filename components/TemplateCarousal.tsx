@@ -6,7 +6,7 @@ import "slick-carousel/slick/slick-theme.css";
 import "../app/globals.css";
 import EmailCard from "./EmailCard";
 
-const NextArrow = (props:any) => {
+const NextArrow = (props: any) => {
   return (
     <>
       <div
@@ -18,7 +18,7 @@ const NextArrow = (props:any) => {
   );
 };
 
-const PrevArrow = (props:any) => {
+const PrevArrow = (props: any) => {
   return (
     <>
       <div
@@ -32,10 +32,10 @@ const PrevArrow = (props:any) => {
 
 type props = {
   templates: any;
-  category:string
+  category: string;
 };
 
-const TemplateCarousal = ({templates,category}:props) => {
+const TemplateCarousal = ({ templates, category }: props) => {
   const settings = {
     infinite: false,
     speed: 500,
@@ -63,37 +63,39 @@ const TemplateCarousal = ({templates,category}:props) => {
         breakpoint: 480,
         settings: {
           slidesToShow: 1.5,
-          slidesToScroll: .75,
+          slidesToScroll: 0.75,
         },
       },
     ],
   };
   return (
     <>
-      <div className="lg:block hidden gap-4 my-5 w-11/12 ">
-        <div className="py-4">
-          <h2 className="text-xl font-bold text-black/80">
-            {category}
-          </h2>
-        </div>
-        <Slider {...settings}>
-          {templates.map((template:any)=>(
-            <EmailCard cardData={template} key={template.title} />
-          ))}
-        </Slider>
-      </div>
-      <div className="lg:hidden ">
-      <div className="py-2">
-          <h2 className="text-lg font-bold text-black/80">
-            {category}
-          </h2>
-        </div>
-        <Slider {...settings}>
-        {templates.map((template:any)=>(
-            <EmailCard cardData={template} key={template.title} />
-          ))}
-        </Slider>
-      </div>
+      {templates.length > 0 && (
+        <>
+          <div className="lg:block hidden gap-4 my-5 w-11/12 ">
+            <div className="py-4">
+              <h2 className="text-xl font-bold text-black/80">{category}</h2>
+            </div>
+            <Slider {...settings}>
+              {templates.length > 0 &&
+                templates.map((template: any) => (
+                  <EmailCard cardData={template} key={template.title} />
+                ))}
+            </Slider>
+          </div>
+          <div className="lg:hidden ">
+            <div className="py-2">
+              <h2 className="text-lg font-bold text-black/80">{category}</h2>
+            </div>
+            <Slider {...settings}>
+              {templates.length > 0 &&
+                templates.map((template: any) => (
+                  <EmailCard cardData={template} key={template.title} />
+                ))}
+            </Slider>
+          </div>
+        </>
+      )}
     </>
   );
 };
